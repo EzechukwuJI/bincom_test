@@ -94,8 +94,6 @@ def addNewScoreView(request):
 		for key in rp:
 			if key not in exclusion_list and rp[key] != "":
 				party_abbrev = get_party_abbrev(key)
-				
-
 				# create new polling unit score record
 				new_record = AnnouncedPuResults.objects.get_or_create(polling_unit_uniqueid = rp['unit'],
 				party_abbreviation = party_abbrev,
